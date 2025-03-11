@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>site do henrique</title>
-        <link rel="stylesheet" href="style.css" />
+        <title>subset counting</title>
+        <link rel="stylesheet" href="../style.css" />
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
@@ -27,33 +27,29 @@
     </head>
 
     <body>
-        <h1>henrique</h1>
-        <p>IMPA/UFRJ</p>
-
-        <p>e-mails:
-        <ul>
-            <li>henrique.cardoso@impa.br</li>
-            <li>henriquelc@dcc.ufrj.br</li>
-        </ul>
+        <h2>Subset counting trick</h2>
+        <p>
+            Suppose we have two graphs \(H\) and \(G\), where we have that
+            \(v(H) = k\) and \(v(G) = n\) (with a very large \(n\)).
         </p>
 
         <p>
-            Github profile: <a href="https://github.com/hnrq104" target="_blank">hnrq104</a>
+            Suppose further that every \(m\)-set of \(G\) has a copy of \(H\).
+            How many copies of \(H\) do we have in total?
         </p>
 
-        <h2>Section 1 (08/03/2025)</h2>
         <p>
-        I am currently an undergraduate student in CS at UFRJ and pursuing a master's degree in Pure Mathematics at IMPA (just started!).
-        I am interested at <b>almost</b> all things math related, but I find reading Combinatorics by far the most enjoyable.
+            We may get a very easy lowerbound by double counting. Notice that
+            every copy of \(H\) is in exactly \[\binom{n-k}{m-k}\] \(m\)-sets of
+            \(G\).
         </p>
 
-        <p>This page will serve the purpose of storing neat little things I find along the way doing mathematics. Stuff like good exercises, good proofs, and
-        anything that interests me.</p>
+        <p>
+            As we have \(\binom{n}{m}\) \(m\)-sets, this means we must have at
+            least:
+        </p>
+        \[\binom{n}{m} / \binom{n-k}{m-k}\]
 
-        <h3>Combinatorics</h3>
-        <ul>
-            <li> <a href="things/mathpage_example.html"> The subset counting trick </a> (10/03/2025)</li>
-        </ul>
-
+        <p>copies of \(H\). ;)</p>
     </body>
 </html>
